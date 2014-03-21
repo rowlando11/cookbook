@@ -9,4 +9,10 @@ node 'demo', 'demo2' {
   file { '/tmp/test':
     content => 'Beeblebrox, this is a very large drink',
   }
+  
+
+  file { '/tmp/hello':
+    content => "Hello, world\n",
+  }
 }
+
