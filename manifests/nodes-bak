@@ -1,0 +1,20 @@
+#node 'demo' {
+#  include nginx
+#}
+
+node 'demo' {
+	include ssh
+	include sudoers
+	user { 'art':
+		ensure     => present,
+		comment    => 'Art Vandelay',
+		home		   => '/home/art/',
+		managehome => true,
+	}
+
+	ssh_authorized_key { 'art_ssh':
+		user => 'art',
+		type => 'rsa',
+		key  => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDAFkD5UhQ49csRj6L0QBsKLWvM1ZNzRoV524LB6aLb219pun+fQLSfJUbhovPf4+W1rBiL4lfLwzT1MOPL8OIUZzd7FCPi6UDoB3MRXU58tC2WsoEq3VD9BDeygbSPAfKseEwMvi28cuRQ36MlZnYqZPHeEGYhh/hb4DLEkzsrj/gxJX0bLAPT60P9ubcwcMVgU3PIkjXu1KuvjTOkm6lhwsbwA5yb0MkAh1Y64xw1S/x7UMOslbhG51BttqnNdQsVLYH5CQivUpoDPrGQNNN5dg5tJdE/xCJGa89ptzSLLLV4gNt1Hwm4zikaoEpnhjc4GcdguVvU9GPch/y019tr',
+	}
+}
