@@ -2,7 +2,7 @@ node 'demo', 'demo2' {
   nginx::website { 'adorable-animals':
     site_domain => 'adorable-animals.com',
   }
-  class { 'ntp':
+  class { 'ntp2':
     server => 'us.pool.ntp.org',
   }
 
