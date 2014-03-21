@@ -1,11 +1,11 @@
 # Manage NTP server
-class ntp($server='UNSET') {
+class ntp2($server='UNSET') {
   package { 'ntp':
     ensure => installed,
   }
 
   file { '/etc/ntp.conf':
-    content => template('ntp/ntp.conf.erb'),
+    content => template('ntp2/ntp.conf.erb'),
     notify  => Service['ntp'],
   }
 
