@@ -16,4 +16,3 @@ node 'demo', 'demo2' {
     content => "Hello, world\n",
   }
 }
-
