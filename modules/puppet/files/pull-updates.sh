@@ -1,3 +1,3 @@
 #!/bin/sh
 cd /home/rowlando/puppet
-git pull && /usr/local/bin/papply
+git pull origin master && /usr/local/bin/papply
