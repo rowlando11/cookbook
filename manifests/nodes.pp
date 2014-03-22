@@ -1,5 +1,6 @@
 node 'demo', 'demo2' {
 	include puppet
+  include memcached
   nginx::website { 'adorable-animals':
     site_domain => 'adorable-animals.com',
   }
